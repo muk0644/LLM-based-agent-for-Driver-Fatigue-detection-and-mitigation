@@ -1,5 +1,14 @@
 # LLM-based Agent for Driver Sleepiness Detection and Mitigation in Automotive Systems
 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![LLM](https://img.shields.io/badge/LLM-Llama--2--7B-34A853?logo=meta&logoColor=white)](https://huggingface.co/meta-llama)
+[![FAISS](https://img.shields.io/badge/FAISS-Vector--DB-FF6F00?logo=facebook&logoColor=white)](https://faiss.ai/)
+[![Computer Vision](https://img.shields.io/badge/CV-Vision--Transformers-FF69B4)](https://huggingface.co/docs/transformers)
+[![ROS](https://img.shields.io/badge/ROS-Noetic-22314E?logo=ros&logoColor=white)](https://wiki.ros.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub](https://img.shields.io/badge/GitHub-muk0644-181717?logo=github)](https://github.com/muk0644/)
+
 ## Project Overview
 
 Driver fatigue is one of the leading causes of road accidents globally, emphasizing the critical need for intelligent systems to detect and mitigate driver sleepiness. This project leverages cutting-edge Large Language Models (LLMs) integrated with multimodal data—including facial expressions, audio signals, driving behavior, and contextual cues—to proactively assess driver alertness levels and deliver intelligent interventions.
@@ -45,65 +54,70 @@ LLM-based system recommends tailored actions:
 ```
 LLM-based-Agent-for-Driver-Sleepiness-Detection/
 │
-├── input_signal_processing/                 Data preprocessing and synchronization
-│   ├── data_process.py                     Multi-stage data cleaning and normalization
-│   ├── data_process_only_sync.py           Lightweight synchronization only
-│   ├── src/
-│   │   ├── bag_writer_for_offline_data.py ROS 2 bag file writer
-│   │   ├── preprocess_node.py              ROS 2 preprocessing node
-│   │   └── sync_node.py                    ROS 2 synchronization node
-│   ├── readme.txt
-│   └── README.md
+├── 📊 input_signal_processing/              Data preprocessing and synchronization
+│   ├── 🐍 data_process.py                  Multi-stage data cleaning and normalization
+│   ├── 🔄 data_process_only_sync.py        Lightweight synchronization only
+│   ├── 📁 src/
+│   │   ├── 💾 bag_writer_for_offline_data.py  ROS 2 bag file writer
+│   │   ├── ⚙️  preprocess_node.py          ROS 2 preprocessing node
+│   │   └── 🔗 sync_node.py                 ROS 2 synchronization node
+│   ├── 📄 readme.txt
+│   └── 📖 README.md
 │
-├── feature_extraction/                      Multimodal feature extraction pipelines
-│   ├── camera_pipeline.py                  Facial feature extraction and landmarks
-│   ├── carla_data_feature_extraction.py    CARLA simulator data processing
-│   ├── fatigue_estimation.py               Fatigue level computation
-│   └── README.md
+├── 🎥 feature_extraction/                   Multimodal feature extraction pipelines
+│   ├── 📹 camera_pipeline.py               Facial feature extraction and landmarks
+│   ├── 🏎️  carla_data_feature_extraction.py CARLA simulator data processing
+│   ├── 😴 fatigue_estimation.py            Fatigue level computation
+│   └── 📖 README.md
 │
-├── vector_database/                         FAISS-based vector storage
-│   ├── faiss_vd.py                         Vector database implementation
-│   ├── readme.txt
-│   └── README.md
+├── 🔍 vector_database/                      FAISS-based vector storage
+│   ├── 🗂️  faiss_vd.py                     Vector database implementation
+│   ├── 📄 readme.txt
+│   └── 📖 README.md
 │
-├── llm_and_fatigue_handling/                LLM inference and decision-making
-│   ├── llm_node.py                         Main LLM ROS 2 node
-│   ├── generate_fatigue_labels.py          Label generation utility
+├── 🤖 llm_and_fatigue_handling/             LLM inference and decision-making
+│   ├── 🧠 llm_node.py                      Main LLM ROS 2 node
+│   ├── 🏷️  generate_fatigue_labels.py      Label generation utility
 │   │
-│   ├── llama2_7B/                          Base LLaMA 2 7B implementation
-│   │   ├── simple_inference.py             Inference engine
-│   │   ├── simple_input_process.py         Feature preprocessing
-│   │   ├── simple_fine_tuning_pipeline.py  Fine-tuning pipeline
-│   │   ├── simple_faiss_vd.py              Vector database integration
-│   │   ├── captured_data.csv               Training dataset
-│   │   ├── readme.txt
-│   │   └── README.md
+│   ├── 🦙 llama2_7B/                       Base LLaMA 2 7B implementation
+│   │   ├── 🔮 simple_inference.py          Inference engine
+│   │   ├── 📥 simple_input_process.py      Feature preprocessing
+│   │   ├── 🎓 simple_fine_tuning_pipeline.py Fine-tuning pipeline
+│   │   ├── 🗂️  simple_faiss_vd.py          Vector database integration
+│   │   ├── 📊 captured_data.csv            Training dataset
+│   │   ├── 📄 readme.txt
+│   │   └── 📖 README.md
 │   │
-│   ├── llama2_7B_with_prefix_adapter_vector/  Prefix-tuned adapter variant
-│   │   ├── model_wrapper_with_mlp_adapter.py  MLP adapter for features
-│   │   ├── fine_tuning_pipeline.py            Prefix-tuning pipeline
-│   │   ├── inference_v2.ipynb                 Inference notebook
-│   │   ├── input_process.py                   Feature normalization
-│   │   ├── faiss_vd.py                        Vector database integration
-│   │   ├── dummy_data.csv                     Training dataset
-│   │   ├── readme.txt
-│   │   └── README.md
+│   ├── ⚡ llama2_7B_with_prefix_adapter_vector/  Prefix-tuned adapter variant
+│   │   ├── 🔧 model_wrapper_with_mlp_adapter.py  MLP adapter for features
+│   │   ├── 🎓 fine_tuning_pipeline.py        Prefix-tuning pipeline
+│   │   ├── 📓 inference_v2.ipynb             Inference notebook
+│   │   ├── 📥 input_process.py               Feature normalization
+│   │   ├── 🗂️  faiss_vd.py                   Vector database integration
+│   │   ├── 📊 dummy_data.csv                 Training dataset
+│   │   ├── 📄 readme.txt
+│   │   └── 📖 README.md
 │   │
-│   └── tiny_llama/                         Lightweight TinyLLaMA variant
-│       ├── tinyllama_inference.ipynb       Inference notebook
-│       ├── tinyllama_fine_tuning_pipeline.py  Fine-tuning pipeline
-│       ├── tinyllama_input_process.py      Feature preprocessing
-│       ├── tinyllama_faiss_vd.py           Vector database integration
-│       ├── dummy_data.csv                  Training dataset
-│       ├── readme.txt
-│       └── README.md
+│   └── 🏃 tiny_llama/                      Lightweight TinyLLaMA variant
+│       ├── 📓 tinyllama_inference.ipynb    Inference notebook
+│       ├── 🎓 tinyllama_fine_tuning_pipeline.py Fine-tuning pipeline
+│       ├── 📥 tinyllama_input_process.py   Feature preprocessing
+│       ├── 🗂️  tinyllama_faiss_vd.py       Vector database integration
+│       ├── 📊 dummy_data.csv               Training dataset
+│       ├── 📄 readme.txt
+│       └── 📖 README.md
 │
-├── docker/                                  Containerized deployment setup
-│   ├── Dockerfile                          Container build configuration
-│   └── src/
-│       └── data_sync/                      ROS 2 data synchronization package
-│           ├── __init__.py
-│           ├── package.xml                 ROS 2 package manifest
+├── 🐳 docker/                               Containerized deployment setup
+│   ├── 📦 Dockerfile                       Container build configuration
+│   └── 📁 src/
+│       └── 🔗 data_sync/                   ROS 2 data synchronization package
+│           ├── 🐍 __init__.py
+│           ├── 📋 package.xml              ROS 2 package manifest
+│           ├── 🔨 CMakeLists.txt
+│           ├── 📁 scripts/
+│           │   └── 🔗 sync_node.py
+│           └── 📁 msg/
+│               └── 💬 SyncedOutput.msg
 │           ├── CMakeLists.txt              Build configuration
 │           ├── scripts/
 │           │   └── sync_node.py            Synchronization node script
