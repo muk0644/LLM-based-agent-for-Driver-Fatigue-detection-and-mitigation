@@ -1,5 +1,7 @@
 # LLM-based Agent for Driver Sleepiness Detection and Mitigation in Automotive Systems
 
+<div align="center">
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![LLM](https://img.shields.io/badge/LLM-Llama--2--7B-34A853?logo=meta&logoColor=white)](https://huggingface.co/meta-llama)
@@ -7,7 +9,8 @@
 [![Computer Vision](https://img.shields.io/badge/CV-Vision--Transformers-FF69B4)](https://huggingface.co/docs/transformers)
 [![ROS](https://img.shields.io/badge/ROS-Noetic-22314E?logo=ros&logoColor=white)](https://wiki.ros.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub](https://img.shields.io/badge/GitHub-muk0644-181717?logo=github)](https://github.com/muk0644/)
+
+</div>
 
 ## Project Overview
 
@@ -118,19 +121,7 @@ LLM-based-Agent-for-Driver-Sleepiness-Detection/
 │           │   └── 🔗 sync_node.py
 │           └── 📁 msg/
 │               └── 💬 SyncedOutput.msg
-│           ├── CMakeLists.txt              Build configuration
-│           ├── scripts/
-│           │   └── sync_node.py            Synchronization node script
-│           └── msg/
-│               └── SyncedOutput.msg        ROS 2 custom message definition
-│
-└── README.md                                Main project documentation
-```
-
-## Technologies & Frameworks
-
-**Deep Learning:**
-- Transformers: Vision Transformer (ViT), Informer, Wav2Vec 2.0
+.0
 - PyTorch with CUDA acceleration
 - PEFT: Parameter-Efficient Fine-Tuning (LoRA, Prefix Tuning)
 
