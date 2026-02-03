@@ -16,6 +16,11 @@
 
 Driver fatigue is one of the leading causes of road accidents globally, emphasizing the critical need for intelligent systems to detect and mitigate driver sleepiness. This project leverages cutting-edge Large Language Models (LLMs) integrated with multimodal data—including facial expressions, audio signals, driving behavior, and contextual cues—to proactively assess driver alertness levels and deliver intelligent interventions.
 
+<div align="center">
+  <img src="carla_simulator_setup.png" alt="CARLA Simulator Setup for Driver Fatigue Detection" width="800"/>
+  <p><i>Research setup: Driver fatigue detection testing environment using CARLA simulator with steering wheel hardware interface</i></p>
+</div>
+
 ## Key Objectives
 
 - Develop a robust multimodal feature extraction framework from vision, audio, and driving data
@@ -57,7 +62,11 @@ LLM-based system recommends tailored actions:
 ```
 LLM-based-Agent-for-Driver-Sleepiness-Detection/
 │
-├── 📊 input_signal_processing/              Data preprocessing and synchronization
+├── �️  carla_simulator_setup.png            CARLA simulator testing setup image
+├── 📝 README.md                             Project documentation
+├── 📄 addingthingstoreadme.md               Additional documentation notes
+│
+├── �📊 input_signal_processing/              Data preprocessing and synchronization
 │   ├── 🐍 data_process.py                  Multi-stage data cleaning and normalization
 │   ├── 🔄 data_process_only_sync.py        Lightweight synchronization only
 │   ├── 📁 src/
